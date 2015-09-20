@@ -1,0 +1,46 @@
+..\output\app.o: ..\BSP\APP\app.c
+..\output\app.o: ..\USER\include.h
+..\output\app.o: ..\USER\stm32f10x.h
+..\output\app.o: ..\CORE\core_cm3.h
+..\output\app.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\output\app.o: ..\USER\system_stm32f10x.h
+..\output\app.o: ..\USER\stm32f10x_conf.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
+..\output\app.o: ..\USER\stm32f10x.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_bkp.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_cec.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_crc.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_dac.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_dma.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_exti.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_flash.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_i2c.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_pwr.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_rtc.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_sdio.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
+..\output\app.o: ..\STM32F10x_FWLib\inc\misc.h
+..\output\app.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\math.h
+..\output\app.o: ..\BSP\Uart_for_Pc\Uart_for_Pc.h
+..\output\app.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\output\app.o: ..\BSP\Uart_for_Dbus\Uart_for_Dbus.h
+..\output\app.o: ..\BSP\Uart_for_Hc_sr04\Uart_for_Hc_sr04.h
+..\output\app.o: ..\BSP\Sys\sys.h
+..\output\app.o: ..\BSP\Delay\delay.h
+..\output\app.o: ..\BSP\MYIIC\myiic.h
+..\output\app.o: ..\BSP\Timer\timer.h
+..\output\app.o: ..\BSP\MPU6050\mpu6050.h
+..\output\app.o: ..\BSP\Motor\motor.h
+..\output\app.o: ..\BSP\Inv_mpu\inv_mpu.h
+..\output\app.o: ..\BSP\Control\control.h
+..\output\app.o: ..\BSP\APP\app.h
+..\output\app.o: ..\USER\include.h

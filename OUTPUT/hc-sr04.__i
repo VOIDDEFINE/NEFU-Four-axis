@@ -1,0 +1,5 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\BSP\Control -I..\BSP\Delay -I..\BSP\HC-SR04 -I..\BSP\IIC -I..\BSP\Inv_mpu -I..\BSP\Inv_mpu_dmp_motion_driver -I..\BSP\MPU6050 -I..\BSP\PwmOutput -I..\BSP\Sys -I..\BSP\Timer -I..\BSP\Uart_for_Dbus -I..\BSP\Uart_for_Pc -I..\BSP\APP
+-I "D:\Program Files\Keil\ARM\RV31\INC"
+-I "D:\Program Files\Keil\ARM\CMSIS\Include"
+-I "D:\Program Files\Keil\ARM\Inc\ST\STM32F10x"
+-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ..\output\hc-sr04.o --omf_browse ..\output\hc-sr04.crf --depend ..\output\hc-sr04.d "..\BSP\HC-SR04\HC-SR04.c"

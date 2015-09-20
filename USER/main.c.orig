@@ -1,0 +1,80 @@
+#include "usart.h"
+#include "sys.h"
+#include "delay.h"
+#include "mpu6050.h"
+#include "led.h"
+#include "bsp_pwm_output.h"
+#include "control.h"
+#include "timer.h"
+#include "usart1.h"
+#include "HC-SR04.h"
+
+extern uint16_t Channel_Receive[13];
+extern float thr_adder_Integration;
+volatile uint8_t tim2flag=0;
+u8 US100_Flag = 1;
+int Distance = 0;
+int main(void)
+{
+  uint8_t Tim100ms = 0;
+	
+  int CRC2[4]={0};
+	delay_init();			//SYSTICK的时钟固定为HCLK时钟的1/8,SYSCLK:系统时钟为72MHz.
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+  uart_init(19200);
+  printf("OK~\n");
+  USART1_Config(); //串口1初始化为Dbus，波特率100000，工作在接收模式 PA10
+  US100_USART3_Config();
+  DMA_Config();
+  USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
+	delay_ms(1500);
+	MPU6050_Init();
+  TIM3_PWM_Init(); //PWM初始化，250-1000us；500-2000us，周期4000us-250Hz
+  Timer2_Init(40,7199);//定时器2，1Mhz的计数频率，计数到40为4ms
+  delay_ms(1000);
+  delay_ms(1000);
+  delay_ms(1000);
+  delay_ms(1000);
+  MPU6050_Pose(); 
+
+  PID_controllerInit();
+
+  MPU6050_Pose();
+  while(Roll == 0)
+  {
+    MPU6050_Pose();
+  }
+  delay_ms(1000);
+  
+	while(1)
+	{
+    if(US100_Flag == 1)//超声波采集中断
+    {
+        US100_Flag = 0;
+        USART_SendData(USART3,0x55);//触发超声波
+    }
+		if(tim2flag>0)
+    {
+      Tim100ms++;
+      tim2flag = 0;
+      MPU6050_Pose();     
+      Getdesireddata();
+      PID_CAL();
+      
+      Motor_Protect();
+      TIM3_PWM_OUTPUT(MOTOR1,MOTOR2,MOTOR3,MOTOR4);		//A6,A7,B0,B1
+      //if(Tim100ms >= 3)
+      //{
+        Tim100ms = 0;
+          CRC2[0]=(int)(Motor_Thr);
+          CRC2[1]=(int)(Distance);
+          CRC2[2]=(int)(thr_adder_Integration * 100); 
+          CRC2[3]=(int)(Channel_Receive[ROLL_D_BUS]); 
+          CRC_send(CRC2);        
+      //}
+      
+    }
+    
+		//UART1_ReportIMU((int)(10*Yaw),(int)(10*Pitch),(int)(10*Roll),1,1,1,100);
+	}	
+}

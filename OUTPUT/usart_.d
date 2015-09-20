@@ -1,0 +1,33 @@
+..\output\usart_.o: ..\BSP\Uart_for_Pc\usart_.c
+..\output\usart_.o: ..\BSP\Sys\sys.h
+..\output\usart_.o: ..\USER\stm32f10x.h
+..\output\usart_.o: ..\CORE\core_cm3.h
+..\output\usart_.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\output\usart_.o: ..\USER\system_stm32f10x.h
+..\output\usart_.o: ..\USER\stm32f10x_conf.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
+..\output\usart_.o: ..\USER\stm32f10x.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_bkp.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_cec.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_crc.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_dac.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_dma.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_exti.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_flash.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_i2c.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_pwr.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_rtc.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_sdio.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
+..\output\usart_.o: ..\STM32F10x_FWLib\inc\misc.h
+..\output\usart_.o: ..\BSP\Uart_for_Pc\usart.h
+..\output\usart_.o: D:\Program Files\Keil\ARM\ARMCC\bin\..\include\stdio.h
